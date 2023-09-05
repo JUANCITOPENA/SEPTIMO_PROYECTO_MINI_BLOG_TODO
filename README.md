@@ -15,6 +15,12 @@ Este Mini Blog está diseñado como un sitio web simple con varias páginas. Cad
 - [Cursos](cursos.html): Listado de cursos disponibles.
 - [Contacto](contactos.html): Información de contacto para el autor.
 
+### CAPTURAS DE PANTALLA:
+
+![image](mini_blog.jpg)
+
+### Link pagina Web:
+
 ## Uso
 
 Puedes clonar este repositorio o descargar los archivos directamente. Luego, puedes abrir los archivos HTML en tu navegador web para ver el Mini Blog en acción.
