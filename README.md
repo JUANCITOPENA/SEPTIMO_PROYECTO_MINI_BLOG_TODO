@@ -2,7 +2,9 @@
 
 ¡Bienvenido a mi Mini Blog!
 
-Este es mi séptimo proyecto, un Mini Blog diseñado con HTML y CSS. Aquí encontrarás información sobre el proyecto y cómo puedes utilizarlo.
+Este es mi séptimo proyecto, un Mini Blog diseñado con HTML, CSS, BOOTSTRAP, JAVASCRIPT. Tiene las secciones de una Pagina en HTML5, con sus etiquetas semanticas, y un contenido ajustado a pantallas moviles y grandes.
+
+Aquí encontrarás información sobre el proyecto y cómo puedes utilizarlo.
 
 ## Descripción del Proyecto
 
@@ -33,6 +35,3 @@ Siéntete libre de contribuir mejorando este proyecto. Puedes crear solicitudes 
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
 
----
-
-Espero que este README te sea útil para presentar tu proyecto en GitHub. Puedes personalizarlo según las necesidades específicas de tu proyecto. ¡Buena suerte!
