@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"
+    href="https://cdn.icon-icons.com/icons2/2415/PNG/512/html_original_wordmark_logo_icon_146478.png"
+    type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Ejemplo para Proyecto Web Basico con HTML5, CSS de IHC">
+  <meta name="keywords" content="HTML, Bootstrap, CSS, JavaScript">
+  <meta name="author" content="ING. JUANCITO PEÑA">
+  <meta name="copyright" content="https://advisertecnology.com/" />
+  <title>Mini Blog con HTML5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" ></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+</head>
+
+<body>
+  <div class="container">
+
+
+   <!-- Carrusel de imágenes -->
+   <div class="w3-container">
+    <h2>La programación es como un lienzo en blanco donde la creatividad cobra vida a través del código.</h2>
+    <p>Transforma tu curiosidad en código, y tus sueños en tecnología: ¡Bienvenido al viaje de la programación, donde cada línea es un paso hacia la innovación.</p>
+  </div>
+
+  <div class="w3-content" style="max-width:1200px">
+    <img class="mySlides" src="imagenes/img1.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img2.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img3.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img4.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img5.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img6.png" style="width:100%">
+  </div>
+
+  <div class="w3-center">
+    <div class="w3-section">
+      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+    <!-- <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+    <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    <button class="w3-button demo" onclick="currentDiv(3)">3</button>  -->
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
+    }
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+  </script>
+
+    <br>
+        <!-- Encabezado de la página -->
+    <header class="header">
+      <div class="header-content">
+        <a class="navbar-brand" href="#">BIENVENIDOS A MI MINI-BLOG</a>
+        <nav class="nav-menu">
+          <a href="index.html">Inicio</a>
+          <a href="acerca.html">Acerca de</a>
+          <a href="cursos.html">Cursos</a>
+          <a href="contactos.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+
+
+    <main>
+      <div class="row">
+        <section class="col-68">
+      
+          <!--ARTICULOS-->
+      <article>
+        <h2 class="Experiencia"><i class="fa fa-graduation-cap"></i> Mi Aprendizaje Top</h2>
+    
+        <p class="Articulo1">
+          👨‍🎓 Mi educación ha estado ligada a la Tecnología. Soy graduado de Ingeniería en Sistemas y Computación, con una
+          especialidad en Desarrollo de Software, y una Maestría en Sistemas con Mención Gerencial. He realizado algunos cursos
+          presenciales y virtuales que han contribuido a mi crecimiento profesional y personal. Mis habilidades van desde el uso
+          avanzado de herramientas BI, como Excel, SQL Server, Power BI y Crystal Report, hasta niveles Mid-Level o Intermedio de
+          desarrollo con tecnologías como: HTML, CSS, Bootstrap,JavaScript, PHP, Wordpress, C#, Python, Git, GitHub, SCRUM, Slack, Asana, Jira,
+          Balsamiq, Figma, Framer. <br><br>
+           <strong>Aqui les dejo una tabla con algunas de mi Habilidades y Cursos.</strong> </p>
+          <article>
+
+            <table id="customers">
+        
+              <tr>
+                <th>Cursos y Habilidades</th>
+                <th>Institucion</th>
+                <th>Fecha</th>
+              </tr>
+            
+
+              <tr>
+                <td>
+                  <li><i class="fas fa-bar-chart fa-spin" style="font-size:24px;color:#aab604"></i>
+                    <a href="https://www.udemy.com/certificate/UC-9c93ce7c-e418-4477-a59d-00c7d159ceea/" target="_blank">
+                      -SQL Server Integration Services (SSIS) desde 0 hasta Experto
+                    </a>
+                  </li>
+                </td>
+                <td>Udemy</td>
+                <td>2022</td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <li><i class="fas fa-area-chart fa-spin" style="font-size:24px;color:#0d04b6"></i>
+                    <a href="https://www.udemy.com/certificate/UC-050eb76a-67d2-4f04-93ec-4b8a78c89694/" target="_blank">
+                      -BI en SQL SERVER - (Integration Services RTL, CUBO, Reporting Services)
+                    </a>
+                  </li>
+                </td>
+                <td>Udemy</td>
+                <td>2022</td>
+              </tr>
+                <tr>
+                  <td>
+                    <li><i class=" fas fa-chart-pie fa-spin" style="font-size:24px;color:#130f40"></i>
+                      <a href="https://www.linkedin.com/learning/paths/conviertete-en-data-analyst?originalSubdomain=es"
+                        target="_blank">
+                        -Conviértete en Data Analyst (Big Data, Python, R, Power Bi, Excel,etc).</a>
+                    </li>
+                  </td>
+                  <td>Linkedin</td>
+                  <td>2021</td>
+                </tr>
+              
+              
+              <tr>
+                <td>
+                  <li><i class=" fas fa-chart-bar fa-spin" style="font-size:24px;color:#fa8231"></i>
+                    <a href="https://www.udemy.com/certificate/UC-XS12COOH/" target="_blank"> - Power BI – Análisis de Datos y
+                      Business
+                      Intelligence, Excel, Dashboards, y DAX</a>
+                  </li>
+                </td>
+                <td>Udemy</td>
+                <td>2020</td>
+              </tr>
+              
+              
+              <tr>
+                <td>
+                  <li><i class=" fab fa-wordpress fa-spin" style="font-size:24px;color:#4834d4"></i>
+                    <a href="https://www.udemy.com/certificate/UC-CAHKD2AC/" target="_blank">
+                      - Introducción al desarrollo de templates  con WordPress</a>
+                  </li>
+                </td>
+                <td>Udemy</td>
+                <td>2019</td>
+              </tr>
+
+                
+              <tr>
+                <td>
+                  <li><i class="fas fa-cogs fa-spin" style="font-size:24px;color:#ddd609"></i>
+                    <a href="https://www.credly.com/badges/880f493c-f6e7-4730-9b4b-63b27c4530d6?source=linked_in_profile" target="_blank">
+                      -Scrum Foundation Professional Certificate (Valido-2020-2022)</a>
+                  </li>
+                </td>
+                <td>CertiProf</td>
+                <td>2020</td>
+              </tr>
+
+                
+              <tr>
+                <td>
+                  <li><i class=" fab fa-python fa-spin" style="font-size:24px;color:#4834d4"></i>
+                    <a href="https://www.udemy.com/course/master-en-python-aprender-python-django-flask-y-tkinter/" target="_blank"> -
+                      Master en Python (Python, MySQL, SQLite, POO, Tkinker, Django 3, Flask, etc) </a>
+                  </li>
+                </td>
+                <td>Udemy</td>
+                <td>2022</td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <li><i class=" fas fa-code fa-spin" style="font-size:24px;color:#e84118"></i>
+                    <a href="https://www.udemy.com/course/master-en-desarrollo-web-full-stack-angular-node-laravel-symfony/"
+                      target="_blank"> - Master en webs Full Stack: Angular, Node, Laravel, Symfony +</a>
+                  </li>
+
+                </td>
+                <td>Udemy</td>
+                <td>2022</td>
+              </tr>
+
+
+              <tr>
+                <td>
+                <li><i class=" fab fa-js-square fa-spin" style="font-size:24px;color:#fbc531"></i>
+                  <a href="https://www.udemy.com/certificate/UC-YPOJ9HLT/" target="_blank"> - Master en JavaScript: jQuery, JSON,
+                    Ajax, TypeScript, Angular, Node, MEAN </a>
+                </li>
+
+                </td>
+                <td>Udemy</td>
+                <td>2019</td>
+              </tr>
+
+  
+              
+              <tr>
+                <td>
+                  <li><i class="fab fa-css3-alt fa-spin" style="font-size:24px;color:blue"></i>
+                    <a href="https://www.udemy.com/certificate/UC-4d7e255a-c20a-4312-88f5-060f18c5c890/" target="_blank"> - Master en
+                        CSS (SASS, Less, Flexbox, Grid y Bootstrap</a>
+                </li>
+
+                </td>
+                <td>Udemy</td>
+                <td>2020</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <li><i class=" fab fa-js-square fa-spin" style="font-size:24px;color:#44bd32"></i>
+                    <a href="https://www.udemy.com/certificate/UC-a9318f13-1005-4ead-a723-6e4df77f744e/" target="_blank"> 
+                      - Master Frameworks para JavaScript (Angular 8, React JS, Vue.js, Node y +)</a>
+                </li>
+                </td>
+                <td>Udemy</td>
+                <td>2021</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <li><i class=" fab fa-php fa-spin" style="font-size:24px;color:#be2edd"></i>
+                    <a href="https://www.udemy.com/certificate/UC-563d38ab-e86f-48e3-8b88-18a859dd2659/" target="_blank"> - Master en
+                        PHP, SQL, MySQL, POO, MVC, Laravel5, Symfony 4, WordPress +</a>
+                </li>
+                </td>
+                <td>Udemy</td>
+                <td>2020</td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <li><i class="fab fa-btc fa-spin" style="font-size:24px;color:goldenrod"></i>
+                    <a href="https://www.udemy.com/certificate/UC-NU4BMHGI/" target="_blank"> - Curso Introducción a Bitcoin y a la
+                        Tecnología Blockchain (Udemy)</a>
+                </li>
+
+                </td>
+                <td>Udemy</td>
+                <td>2019</td>
+              </tr>
+
+
+
+              <tr>
+                <td>
+                  <li><i class="fas fa-coins fa-spin" style="font-size:24px;color:#009432"></i>
+                    <a href="https://res.cloudinary.com/jpvtutoriales/image/upload/v1565881074/certificado-curso-profesional-db.pdf"
+                        target="_blank"> - Curso Profesional de Bases de Datos SQL, MySQL</a>
+                </li>
+
+                </td>
+                <td>Codigo Facilito</td>
+                <td>2019</td>
+              </tr>
+
+              <tr>
+                <td>
+
+                  <li><i class="fas fa-user-shield fa-spin" style="font-size:24px;color:#c23616"></i>
+                    <a href="https://res.cloudinary.com/jpvtutoriales/image/upload/v1565881096/ext.jpg" target="_blank">
+                      -Cybersecurity Essentials - Cisco Networking Academy</a>
+                  </li>
+
+                </td>
+                <td>Cisco -Exae</td>
+                <td>2018</td>
+              </tr>
+
+
+              <tr>
+                <td>
+
+                  <li><i class=" fas fa-user-shield fa-spin" style="font-size:24px;color:blue"></i>
+                    <a href="https://www.udemy.com/certificate/UC-efa1b45e-7f19-4d7a-a482-2c87aea8ff5f/" target="_blank"> - Hacking
+                      Etico de Cero a Cien ( Ciberseguridad y Ciberdefensa) (UDEMY 2021)</a>
+                  </li>
+
+                </td>
+                <td>Udemy</td>
+                <td>2021</td>
+              </tr>
+
+
+
+
+
+
+              <tr>
+                <td>
+
+                  <li><i class=" 	fas fa-globe fa-spin" style="font-size:24px;color:#009432"></i>
+                    <a href="https://res.cloudinary.com/jpvtutoriales/image/upload/v1565881951/CERTIFICADO_DE_CENTU-TECNICO_EN_PAGINA_WEB.jpg"
+                      target="_blank"> - Tecnico en Desarrollo de Página WEB (ASP.Net, C#, SQL Server) </a>
+                  </li>
+
+                </td>
+                <td>CENTU</td>
+                <td>2012</td>
+              </tr>
+
+
+
+              <tr>
+                <td>
+
+                  <li><i class=" fas fa-ethernet fa-spin" style="font-size:24px;color:blue"></i>
+                    <a href="https://res.cloudinary.com/jpvtutoriales/image/upload/v1565881933/TECNICO_EN_MANTENIMIENTO_DE_REDES_INFOTEP.jpg"
+                      target="_blank"> - Tecnico en Mantenimiento de Redes y Cableado Estructurado</a>
+                  </li>
+                </td>
+                <td>Infotep</td>
+                <td>2008</td>
+              </tr>
+
+
+              <tr>
+                <td>
+
+                  <li><i class=" fas fa-hourglass-half fa-spin" style="font-size:24px;color:#EA2027"></i>
+                    <a href="https://res.cloudinary.com/jpvtutoriales/image/upload/v1565881933/CERTIFICADO_DE_INFOTEP_JUSTO_A_TIEMPO.jpg"
+                      target="_blank"> - Reingenieria Aplicada a los Procesos- Justo a Tiempo </a>
+                  </li>
+                </td>
+                <td>Infotep</td>
+                <td>2010</td>
+              </tr>
+
+              <tr>
+                <td>
+
+                  <li><i class=" fas fa-laptop-code fa-spin" style="font-size:24px;color:#1B1464"></i>
+                    <a href="https://res.cloudinary.com/jpvtutoriales/image/upload/v1565881953/CERTIFICADO_DE_CENTU-TECNICO_EN_INFORMATICA.jpg"
+                      target="_blank">- Tecnico en Informatica (Paquete Offimatico Internet], [Fox-Pro, Visual Basic 6.0])</a>
+                  </li>
+                </td>
+                <td>CENTU</td>
+                <td>2001</td>
+              </tr>
+
+          </table>
+
+          </article>
+          
+
+
+
+
+
+          <hr>
+         
+
+
+        </section>
+
+               <!-- Barra lateral -->
+               <aside class="col-28">
+                <h2 class="h4">💚Tus Anuncios con Nostros lo ven todos</h2>
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <img src="https://www.psd-dude.com/tutorials/matrix-effect-animation-gif-photoshop-tutorial/matrix-effect-with-code-rain-animation-photoshop-tutorial.gif"
+                    alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+                  <p>El código que estás escribiendo hoy es el software que dará forma al mañana</p>
+                  <a href="#" class="btn btn-success">Ver Publicidad</a>
+                </div>
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <img class="web"
+                    src="https://balcru.com/cdn/shop/products/colecciones-RogelioILuis-gamer-Frase-Programador-vertical-acrilico.jpg?v=1614809444&width=1024"
+                    alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+                  <p>El código que estás escribiendo hoy es el software que dará forma al mañana
+                  </p>
+                  <a href="#" class="btn btn-success">Ver Publicidad</a>
+                </div>
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <img src="https://pbs.twimg.com/media/BnnQsSdIMAAigA0.jpg" alt="Anuncio publicitario"
+                    class="img-fluid rounded mb-2">
+                  <p>Cada error en el código es una oportunidad de aprendizaje hacia la excelencia en el desarrollo.
+                  </p>
+                  <a href="#" class="btn btn-success">Ver Publicidad</a>
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <img src="https://media.tenor.com/Z_Ah8rkdZ4YAAAAM/walking-code.gif" alt="Anuncio publicitario"
+                    class="img-fluid rounded mb-2">
+                  <p class="text-center">Cada error en el código es una oportunidad de aprendizaje hacia la excelencia en el desarrollo.</p>
+                  <a href="#" class="btn btn-success">Ver Publicidad</a>
+                </div>
+                
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Lt2P88q0Y68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>El desarrollo web es como un viaje interminable de resolución de acertijos, y cada logro es un paso hacia la siguiente maravilla digital..
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFPqYyd0Hh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>Escribe código como si la persona que lo mantendrá en el futuro fuera un psicópata violento que sabe dónde vives." - Martin Golding
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dd-g0g2tfxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>La programación no se trata de lo que haces con el código, sino de lo que puedes hacer con tu mente." - Evelyn H. Lauder
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mNbnV3aN3KA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>Un programador de verdad es aquel que sabe resolver problemas." - Edsger W. Dijkstra
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3yM5uXp-T_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>En la programación, como en la vida, la perseverancia y la paciencia son claves para el éxito." - Felicia Day
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9fwkpxr3Dw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>El software es como el sexo: mejor cuando es gratis." - Linus Torvalds
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9fwkpxr3Dw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>El software es como el sexo: mejor cuando es gratis." - Linus Torvalds
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XXllX0A_9KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>La mejor forma de predecir el futuro es implementarlo." - David Heinemeier Hansson
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+              </aside>
+
+      </div>
+
+    </main>
+   
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white mt-4">
+      <h2>&copy; 2023 Juancito Peña V.</h2>
+      <h2><a href="https://advisertecnology.com/" target="_blank"
+          style="color: rgb(225, 207, 9);">https://advisertecnology.com/</a></h2>
+
+      <hr>
+      <div class="centrar-contenido">
+        <div class="redes">
+          <h2>Sigueme en mi Redes Sociales</h2>
+
+          <!-- Agregamos font awesome icons -->
+          <a href="https://www.linkedin.com/in/juancitope%C3%B1a/" class="fa fa-linkedin-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.youtube.com/channel/UCSob-3E5z4IHtMF5B4bN-FA" class="fa fa-youtube-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.facebook.com/juancito.p.v" class="fa fa-facebook-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://twitter.com/JuancitoPenaV" class="fa fa-twitter-square"
+            style="font-size:48px;  color: rgb(214, 208, 10);"></a>
+          <a href="https://github.com/JUANCITOPENA" class="fa fa-github-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.instagram.com/juancito.pena.v/?hl=es" class="fa fa-instagram"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+
+
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

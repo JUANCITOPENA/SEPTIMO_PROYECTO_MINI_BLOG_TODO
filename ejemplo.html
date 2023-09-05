@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario con Imagen y Estilos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #container {
+      width: 85%;
+      max-width: 800px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    input {
+      width: 70%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Uso de la API de Dell-E para Generar imagen con el UseLLM</h1>
+    <input type="text" id="inputText" placeholder="Ingrese el texto" />
+    <button onclick="generateText()">Generar Texto en Color Verde</button>
+    <div>
+      <img src="tu_ruta_de_imagen.jpg" alt="Imagen generada" id="generatedImage" />
+    </div>
+  </div>
+
+  <script>
+    function generateText() {
+      const inputText = document.getElementById("inputText").value;
+      const url = "https://api.openai.com/v1/engines/davinci-codex/completions";
+      const apiKey = "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"; // Reemplaza "TU_API_KEY" con tu clave de API de OpenAI
+
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          prompt: inputText,
+          max_tokens: 150,
+          temperature: 0.7
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        const generatedText = data.choices[0].text.trim();
+        const imgElement = document.getElementById("generatedImage");
+        imgElement.alt = generatedText;
+        imgElement.src = "tu_ruta_de_imagen.jpg"; // Reemplaza "tu_ruta_de_imagen.jpg" con la ruta de la imagen que deseas mostrar
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+    }
+  </script>
+</body>
+</html>

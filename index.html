@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"
+    href="https://cdn.icon-icons.com/icons2/2415/PNG/512/html_original_wordmark_logo_icon_146478.png"
+    type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Ejemplo para Proyecto Web Basico con HTML5, CSS de IHC">
+  <meta name="keywords" content="HTML, Bootstrap, CSS, JavaScript">
+  <meta name="author" content="ING. JUANCITO PEÑA">
+  <meta name="copyright" content="https://advisertecnology.com/" />
+  <title>Mini Blog con HTML5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+ <!-- Contenedor principal -->
+  <div class="container">
+
+   <!-- Carrusel de imágenes -->
+   <div class="w3-container">
+    <h2>La programación es como un lienzo en blanco donde la creatividad cobra vida a través del código.</h2>
+    <p>Transforma tu curiosidad en código, y tus sueños en tecnología: ¡Bienvenido al viaje de la programación, donde cada línea es un paso hacia la innovación.</p>
+  </div>
+
+  <div class="w3-content" style="max-width:1200px">
+    <img class="mySlides" src="imagenes/img1.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img2.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img3.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img4.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img5.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img6.png" style="width:100%">
+  </div>
+
+  <div class="w3-center">
+    <div class="w3-section">
+      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+    <!-- <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+    <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    <button class="w3-button demo" onclick="currentDiv(3)">3</button>  -->
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
+    }
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+  </script>
+
+    <br>
+    <!-- Encabezado de la página -->
+    <header class="header">
+      <div class="header-content">
+        <a class="navbar-brand" href="#">BIENVENIDOS A MI MINI-BLOG</a>
+        <nav class="nav-menu">
+          <a href="index.html">Inicio</a>
+          <a href="acerca.html">Acerca de</a>
+          <a href="cursos.html">Cursos</a>
+          <a href="contactos.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <div class="row">
+        <article class="col-68">
+          <h3 class="h4 mp-5 pt-1">¿Qué es la Interacción Humano-Computadora?</h3>
+          <article>
+
+            <img class="web"
+              src="https://th.bing.com/th/id/R.fed53dd47aa85bbb4a38b41100803d07?rik=oDENVKTXRFtOcQ&riu=http%3a%2f%2fsco2.org%2fwp-content%2fuploads%2fhci-1024x341.png&ehk=4lug4XzLUNamy1ggXDGEwx1PdB12JaeGBPV6WIo5dWE%3d&risl=&pid=ImgRaw&r=0"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+            <hr>
+            <p class="Articulo1">
+
+              La disciplina que estudia cómo las personas interactúan con las computadoras y hasta qué punto las
+              computadoras se
+              desarrollan para interactuar con las personas se llama Interacción Humano-Computadora. IHC consta de tres
+              componentes:
+              los usuarios, los ordenadores y la interacción entre ellos.</p>
+
+            <p class="Articulo1">
+              La Interacción Humano-Computadora se convirtió oficialmente en una disciplina con el advenimiento de la
+              computadora
+              personal. Con el primer Macintosh, IBM PC 5150 y Commodore 64 utilizados en la oficina, la gente empezó a
+              darse cuenta
+              de cómo esta transición afectará no sólo a su trabajo sino a sus vidas en general. Los PCs fueron lanzados
+              con muchas
+              nuevas características como procesadores de texto, facilidades de juego y ayudas de contabilidad. Con el
+              tiempo, su
+              nivel de sofisticación aumentó hasta el punto en que el objetivo era hacer que la interacción
+              hombre-computadora se
+              asemejara a la interacción entre humanos, de la forma más natural y sin fisuras posible.</p>
+
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </article>
+
+          <article>
+            <h3>¿Qué es el desarrollo web?</h3>
+            <img class="web"
+              src="https://th.bing.com/th/id/R.3596fbee8b284b8d3ee3d36d96d3d04e?rik=o9w1uUDvQVIaYA&pid=ImgRaw&r=00"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+
+            <p class="Articulo1">El desarrollo web es el proceso de crear, construir y mantener sitios web en Internet.
+              Implica una combinación de habilidades técnicas y creativas para producir páginas web funcionales y
+              atractivas que puedan ser accesibles y utilizadas por los usuarios en la web.
+              <br>
+              <br>
+              El diseño web es la creación del diseño visual de la página web, incluyendo la disposición de elementos,
+              elección de
+              colores, tipografía, y otros aspectos que afectan la apariencia del sitio.
+              <br>
+              <br>
+              El Front-end, también conocido como desarrollo del lado del cliente, se enfoca en la parte visible y
+              directamente
+              interactiva del sitio web. Implica la codificación de HTML, CSS y JavaScript para crear la estructura, el
+              diseño y la
+              interactividad con la que los usuarios pueden interactuar directamente en su navegador web.
+              <br>
+              <br>
+              El Back-end es el desarrollo del lado del servidor y se ocupa de la lógica detrás de la escena que permite
+              que un sitio
+              web funcione correctamente. Involucra la programación de servidores, bases de datos y la lógica
+              empresarial para
+              gestionar la interacción de los usuarios con el sitio y almacenar datos.
+              <br>
+              <br>
+              El desarrollo web también implica la gestión de bases de datos para almacenar y recuperar información de
+              manera
+              eficiente.
+              <br>
+              <br>
+              La seguridad web es esencial para asegurar que el sitio esté protegido contra amenazas como ataques de
+              hackers y
+              vulnerabilidades.
+            </p>
+
+            <p class="Articulo1">La optimización para motores de búsqueda (SEO) es un aspecto importante para aumentar
+              la visibilidad del sitio en los resultados de búsqueda y mejorar su tráfico.</p>
+
+            <p class="Articulo1">El desarrollo móvil implica adaptar el sitio para que sea compatible con dispositivos
+              móviles y tabletas, mejorando la experiencia del usuario en estos dispositivos.</p>
+
+            <p class="Articulo1">La comunidad de desarrollo web está en constante cambio y aprendizaje debido al rápido
+              desarrollo de nuevas tecnologías y estándares web.</p>
+
+
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </article>
+          <article>
+            <h3>Desarrollo web</h3>
+            <img class="web"
+              src="https://th.bing.com/th/id/R.27eaf3797ac676bd0339d14b4b09baa4?rik=ZtiVeRZ262V3JA&pid=ImgRaw&r=0"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+            <p class="Articulo1">
+              Desarrollo web significa construir y mantener sitios web; es el trabajo que tiene lugar en un segundo
+              plano y que
+              permite que una web tenga una apariencia impecable, un funcionamiento rápido y un buen desempeño para
+              permitir la
+              mejor experiencia de usuario. Los desarrolladores web son como duendes con poderes: nunca los ves, pero
+              son los que
+              hacen que todo esté bien y funcione de manera rápida y eficiente. </p>
+            <img class="web" src="https://softinginteractivo.com/wp-content/uploads/2021/06/full-stack-1024x473.jpg"
+              alt="aqui va una image">
+
+            <p class="Articulo1">
+
+              Los desarrolladores web lo hacen a través de diversos lenguajes de programación. El lenguaje que usan en
+              cada momento
+              depende del tipo de tarea que están haciendo. El desarrollo web se divide, de forma general, en Frontend
+              (la parte
+              cliente) y Backend (la parte servidor). </p>
+
+
+            <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="btn btn-primary">Ver más</a>
+
+
+          </article>
+
+
+          <article>
+            <h3>Backend y Frontend, ¿Qué es y cómo funcionan en la programación?</h3>
+            <img class="web"
+              src="  https://www.suratica.es/wp-content/uploads/2020/10/que-es-el-backend-y-que-es-el-frontend-1.jpg"
+              alt="">
+
+            <p class="Articulo1">
+              El Frontend y el Backend son dos componentes fundamentales en el desarrollo de aplicaciones web. Juntos,
+              forman la
+              estructura completa de una aplicación web y trabajan en conjunto para proporcionar una experiencia
+              interactiva y
+              funcional a los usuarios.
+            </p>
+            <p class="Articulo1">
+              Hoy en día, la programación es un ámbito que no para de crecer, desarrollar páginas web, crear
+              aplicaciones y
+              programas
+              que faciliten nuestro día a día o mejoren la experiencia del usuario, son funciones cruciales que
+              desempeñan los
+              desarrolladores.
+
+              Los términos de frontend y backend, tienen cualidades únicas y distintivas, actúan como unidades que por
+              separado,
+              interactúan entre sí para asegurar la funcionalidad de un sitio.
+
+              Para contar con una excelente página digital, se requiere más que un dominio, hipervínculos, meta tags y
+              heading tags,
+              es por ello, que te explicaremos por qué estos 2 conceptos son tan importantes.
+            </p>
+            <p class="Articulo1">
+              Ninguna es más importante que la otra, se complementan y necesitan mutuamente para funcionar, ya que por
+              una parte, los
+              sitios web deben ser bonitos y amigables y por la otra parte ese mismo sitio debe ser funcional y debe
+              poder realizar
+              operaciones.
+
+              En el front-end se necesitan personas con capacidad creativa y en el back-end se necesitan personas con
+              muy buena lógica
+              para resolver problemas.</p>
+
+            <h3>¿Qué es frontend?</h3>
+            <p class="Articulo1">
+              El frontend es la parte del desarrollo web que se dedica a la parte frontal de un sitio web, en pocas
+              palabras del
+              diseño de un sitio web, desde la estructura del sitio hasta los estilos como colores, fondos, tamaños
+              hasta llegar a las
+              animaciones y efectos.
+
+              Es esa parte de la página con la que interaccionan los usuarios de la misma, es todo el código que se
+              ejecuta en el
+              navegador de un usuario, al que se le denomina una aplicación cliente, es decir, todo lo que el visitante
+              ve y
+              experimenta de forma directa.
+
+              Un front-end, es la persona que se dedica básicamente al diseño web, pero esto no significa que no toque
+              código, tanto
+              el front-end como el back-end están en contacto con código todo el tiempo.
+              <br> <br>
+              Dentro del área de front-end se trabaja con lenguajes mayormente del lado del cliente, como:
+              <br> <br>
+
+              <img class="web"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKcokz6eBgegoTR5N4iDfDX5FPKsVpSFNpoVh-moevImQ6cMW0SnQXgNJibFgQbySMwxg&usqp=CAU"
+                alt="">
+
+              <strong>HTML</strong> (lenguaje de marcado de hipertexto, se utilizan etiquetas que estructuran y
+              organizan el contenido
+              de la web). Es el lenguaje de marcado utilizado para estructurar el contenido de una página web. Define
+              los elementos y su
+              disposición, como encabezados, párrafos, imágenes, formularios, entre otros.
+              <br> <br>
+              <img class="web" src="https://www.arsys.es/blog/file/uploads/2017/01/CSS3.jpg" alt="">
+              <strong>CSS</strong> (se encarga del formato y diseño visual de las páginas web escritas en html) para
+              darle estructura
+              y estilo al
+              sitio. Es el lenguaje utilizado para describir cómo se debe presentar el contenido HTML. Controla la
+              apariencia y el
+              diseño de los elementos, como colores, tipografía, márgenes y tamaños.
+              <br> <br>
+              <img class="web"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW8AAACJCAMAAADUiEkNAAAAk1BMVEX/4AEAAAD/5wH/4gGUhQFZTgD/5AH/6AF+cgAAAAP/6gHr0AH43AHexQH02QH/7AHDrgGjkQHkygG9qAHSuwFgVgKLfAFRSAFIQAFUTAHu1AG3owE6NgCnlAEoIwFjWgHMtgGbiwEyLQBqXwApJQKwnQEuKgRyZwCFdgFLRQFAOgIeHAENCwDQuAEUEwGOfgELCQNswHBqAAAEy0lEQVR4nO3da3OqOhQGYJOlCwEviGgtitW6sWqP7fn/v+5g3a0Ek0CsMz2deZ+PVmbcr9nJIhdstQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOBOiPgD0U9/kl+OZQnr30My6MX91XgcJXHIHiPzm/G6WzLWBc4cjx6W4tPzZj4wfTFQRz6Ikra8egPL+UxUbZIAbfwmsmPNm7zVn6u0Tybp9VcD9ex5E3W1aZ+Mg5/5xL+bNW/qLYxxC7H2fugz/2a2vKn3bIm7eDcCd2bLmx+tcQuRow93Zcnba9fELfw+6kJH5rwp9OvyFtseykI35rzlS23cQuzQo7gx5k1hg7j9KToUN8a8Oatk2x334yRTbkcXfTRvR8a8h+pd/H4QfMwPDpNLjTjCNIozU97UK4+W/uFrHpZb+/NrnRCN250pb+4rzTu5tGTqneYK/blEaXIDY97H8uuv5Snv01fx0kPjvokx76j8ekfpqGU7QuO+UbO8H9WBEePkzYx5r8qv/4MltDsx5p0o4+URLfo+jPVgrOT9jHX5+zDfX74pge97aOH3YMw7UP4g/NdoiMS/z9y+c1HxkGDnybeZ5wfTat5FpxIRCu/vcZz/3o56AbqVb7Ct72jyLnT7HhK/mW39cqoPXEwS3GDeypI30cG0gvlwRK9yG+v+k/TNkLcQnRgj5y2s+6s4NsVdFOTvjCbuzr5/kFPLhrY/WL10V7M/lsm2K2KODW2uavJukTc2b/vxM+yRdVSX96mJm+rCwgiBu6nPu0UyNe8CjzBoOmmQd5F4kBr3bg5QFrpolPepjbfygzbvF4yZLhrmXSTOfHzSBR6jgTtonHeBvXB3Xaxgi6wLl7xP3crgulhBieLALe/T0BlWT5kkKFGac827SHxYqVUy5N2ce96tVqCW46hQHNTez2uuIVZGzQ4GzOZqzhdzqOssPKWBz9CfGJGsbJRi2/MKvPhR6E6g8ah80QJ7r0yY2mqA1FKOEI9KTbWo/XbFS0+a3lk924O8DUhGS19MlTXKgTL0zS95M+XnXlpzTF4qRfge/YkOeenkI5/yoWB12/GllKbg+Lmy48+rzzqh4N/yRROMlxpM67/5LEs9SqBOifydCyEvnohLDZJ5auCBWoB3kfcVkqvtV0Az+mzGXqRUdstzT0y9dyVQsRmUFuPZq5zMnKM/qeJUacfPyVAys/QqezI356kQzdbBdvhxRXFN0J9U/hZiuKyoBuj7h3WeZ7s3oU73fbZUWT1bXFyyeM+jVZRPl9W/LIY/+4/7P2r07AHxVSqS1K8taOXoTq5Uyj6Dy8DHTR5WcPaK6ltDXu2e1yh1xDKqf/uZ9pGFILVrYYpp+camWoQY+BtMDmoR2R61dkquclseNAoc59ZMaLC1R1edCWzSpWxTxG3Cg70tuutHf8m45r+EmOGQoAXJnTG5Q6pJjnltjXuNLeBW5CWGurpt2MstU+NX5E9izJvU4SDqXEc3TT1TQyVvMDoIzQ7ZXYwnJDfBMsw6r5fcFt2oZe0WSHKYP5VXJd5m05X9Gij5eFh9Ms6zbL7qp7LBmWHigNP+ap6NRtk4iQeBxDljJ58/xuDwawxfl+AXHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMz+A9JPNJwdkL3BAAAAAElFTkSuQmCC"
+                alt="">
+
+              <strong>Javascript</strong> (un lenguaje de programación, rápido y seguro para programar centros de datos,
+              consolas,
+              teléfonos móviles o
+              Internet) para complementar los anteriores y darle dinamismo a los sitios web. Es un lenguaje de
+              programación que
+              permite agregar interactividad a la página web. Con JavaScript, se pueden realizar acciones dinámicas,
+              manipular
+              elementos HTML, responder a eventos y comunicarse con el Backend mediante peticiones HTTP.
+
+              HTML y CSS son lenguajes de marcado y estilo. Javascript es un lenguaje de programación.
+
+              De ellos se generan una gran cantidad de frameworks y librerías que van aumentan las capacidades que se
+              tiene para
+              generar cualquier tipo de interfaz de usuario, como React, Redux, Angular, Bootstrap, Foundation, LESS,
+              Sass, Stylus y
+              PostCSS, entre otros. <strong>Se conoce como el lado del cliente.. </strong>
+              <br> <br>
+              El Frontend se comunica con el Backend enviando solicitudes HTTP para obtener o
+              enviar datos y realizar operaciones en el servidor. Es responsable de renderizar la interfaz de usuario y
+              manejar la
+              interacción del usuario en el navegador.
+            </p>
+            <img class="web"
+              src="https://www.servnet.mx/hs-fs/hubfs/Blog/Blog_Art%C3%ADculos/Blog_Art%C3%ADculos_2021/Blog_Art%C3%ADculos_2021_Marzo/Blog_Art%C3%ADculos_2021_Marzo_Art47_ByF/Blog_Art%C3%ADculos_2021_Marzo_Art49_ByF_nuevo/%C2%BFQue-es-frontend%3F.jpg?width=710&name=%C2%BFQue-es-frontend%3F.jpg"
+              alt="">
+
+            <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="btn btn-primary">Ver más</a>
+
+          </article>
+
+          <article>
+            <h3>¿Qué es backend?</h3>
+            <p class="Articulo1">
+              Mientras que el frontend es la capa de programación ejecutada en el navegador del usuario, el backend
+              procesa la
+              información que alimentará el frontend de datos.
+
+
+
+              Es la capa de acceso a los datos, ya sea de un software o de un dispositivo en general, es la lógica
+              tecnológica que
+              hace que una página web funcione, lo que queda oculto a ojos del visitante.. </p>
+
+
+            <p class="Articulo1">
+
+              El backend de una solución, determina qué tan bien se ejecutará la aplicación y qué experiencia, positiva
+              o negativa,
+              obtendrá el usuario de su uso.
+
+              Trabajar en este apartado supone algo totalmente diferente al frontend, ya que exige el dominio de otros
+              términos de
+              programación, lenguajes que requieren una lógica, ya que esta área es también la encargada de optimizar
+              recursos, de la
+              seguridad de un sitio y otros factores.
+              <br>
+              <br>
+              Aquí se utilizan frameworks como PHP, Javascript, Python y Ruby, entre otros.
+
+              Un framework de desarrollo es el que trabaja en el lado del servidor, se encarga de que las personas
+              puedan disfrutar de
+              una grata experiencia, su propósito principal es que los procesos de desarrollos estén más acelerados, que
+              se puedan
+              volver a utilizar los fragmentos de códigos ya existentes y que se realicen buenas prácticas mediante el
+              uso de
+              distintos patrones.
+            </p>
+
+            <p class="Articulo1">
+              El Backend es la parte de una aplicación web que se ejecuta en el servidor. Es responsable de manejar la
+              lógica del negocio, procesar y almacenar datos, y gestionar las solicitudes del Frontend. En el Backend,
+              se utilizan diferentes tecnologías y lenguajes de programación, como Node.js, Python, Ruby, PHP, Java,
+              entre otros.
+              Las principales funciones del Backend son:
+              <br>
+              <br>
+              <strong>Gestión de bases de datos: </strong>El Backend se encarga de interactuar con la base de datos para
+              almacenar y recuperar datos según sea necesario.
+              <br>
+              <br>
+              <strong>Lógica de negocio: </strong>Aquí se define toda la lógica detrás de la aplicación, como procesar
+              formularios, realizar cálculos, aplicar reglas comerciales, autenticar usuarios, etc.
+              <br>
+              <br>
+              <strong>Seguridad: </strong>El Backend debe implementar medidas de seguridad para proteger la aplicación
+              de amenazas y ataques.
+              <br>
+              <br>
+              <strong>Manejo de peticiones HTTP: </strong>El Backend recibe las solicitudes del Frontend, procesa la
+              información y envía las respuestas adecuadas.
+              <br>
+              <br>
+              El Frontend y el Backend trabajan juntos para proporcionar una experiencia completa al usuario. Cuando un
+              usuario interactúa con la interfaz del Frontend, este puede enviar una solicitud al Backend solicitando
+              cierta información o acción. El Backend procesa esa solicitud, realiza las operaciones necesarias y
+              devuelve una respuesta al Frontend, que luego se muestra al usuario en su navegador. Este ciclo de
+              comunicación continua permite que la aplicación web funcione de manera efectiva y dinámica.
+            </p>
+
+            <img class="web"
+              src="https://images.squarespace-cdn.com/content/v1/56cdb491a3360cdd18de5e16/1609870725124-LR5L549CQ5LQK2PE951J/webhookflow.gif"
+              alt="">
+
+            <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="btn btn-primary">Ver más</a>
+
+          </article>
+
+        </article>
+
+        </section>
+        <!-- Barra lateral -->
+        <aside class="col-28">
+          <h2 class="h4">💚Tus Anuncios con Nostros lo ven todos</h2>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://media1.giphy.com/media/bGgsc5mWoryfgKBx1u/200w.gif?cid=82a1493bf4wszbyxvy4bbd41wk8ddmvke57fus2bw54vja4b&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center">El arte de programar es el arte de organizar y dominar la complejidad." - Edsger W. Dijkstra</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNW1iMzB1MmttdG16ZGE1NXczYXpwb3dxaDhxN3JuNzBjM3BjNmkyaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/RbDKaczqWovIugyJmW/giphy.gif" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center">El código perfecto es la meta, pero la entrega puntual es la prioridad." - Connor McLeod</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://www.psd-dude.com/tutorials/matrix-effect-animation-gif-photoshop-tutorial/matrix-effect-with-code-rain-animation-photoshop-tutorial.gif"
+              alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+            <p>Tu tiempo es limitado, así que no lo desperdicies viviendo la vida de otro programador." - Steve Jobs (adaptado)</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img class="web"
+              src="https://balcru.com/cdn/shop/products/colecciones-RogelioILuis-gamer-Frase-Programador-vertical-acrilico.jpg?v=1614809444&width=1024"
+              alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+            <p>El código que estás escribiendo hoy es el software que dará forma al mañana
+            </p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://pbs.twimg.com/media/BnnQsSdIMAAigA0.jpg" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p>Cada error en el código es una oportunidad de aprendizaje hacia la excelencia en el desarrollo.
+            </p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://media.tenor.com/Z_Ah8rkdZ4YAAAAM/walking-code.gif" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center">Cada error en el código es una oportunidad de aprendizaje hacia la excelencia en el desarrollo.</p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Lt2P88q0Y68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>El desarrollo web es como un viaje interminable de resolución de acertijos, y cada logro es un paso hacia la siguiente maravilla digital..
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFPqYyd0Hh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Escribe código como si la persona que lo mantendrá en el futuro fuera un psicópata violento que sabe dónde vives." - Martin Golding
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/dd-g0g2tfxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>La programación no se trata de lo que haces con el código, sino de lo que puedes hacer con tu mente." - Evelyn H. Lauder
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/mNbnV3aN3KA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Un programador de verdad es aquel que sabe resolver problemas." - Edsger W. Dijkstra
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/3yM5uXp-T_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>En la programación, como en la vida, la perseverancia y la paciencia son claves para el éxito." - Felicia Day
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9fwkpxr3Dw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>El software es como el sexo: mejor cuando es gratis." - Linus Torvalds
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/qgxhrJFTOJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Un buen programador es alguien que siempre busca formas de hacer las cosas mejor." - Steve McConnell
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/XXllX0A_9KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>La mejor forma de predecir el futuro es implementarlo." - David Heinemeier Hansson
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white mt-4">
+      <h2>&copy; 2023 Juancito Peña V.</h2>
+      <h2><a href="https://advisertecnology.com/" target="_blank"
+          style="color: rgb(225, 207, 9);">https://advisertecnology.com/</a></h2>
+
+      <hr>
+      <div class="centrar-contenido">
+        <div class="redes">
+          <h2>Sigueme en mi Redes Sociales</h2>
+
+          <!-- Agregamos font awesome icons -->
+          <a href="https://www.linkedin.com/in/juancitope%C3%B1a/" class="fa fa-linkedin-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.youtube.com/channel/UCSob-3E5z4IHtMF5B4bN-FA" class="fa fa-youtube-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.facebook.com/juancito.p.v" class="fa fa-facebook-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://twitter.com/JuancitoPenaV" class="fa fa-twitter-square"
+            style="font-size:48px;  color: rgb(214, 208, 10);"></a>
+          <a href="https://github.com/JUANCITOPENA" class="fa fa-github-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.instagram.com/juancito.pena.v/?hl=es" class="fa fa-instagram"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+
+
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+</body>
+
+</html>

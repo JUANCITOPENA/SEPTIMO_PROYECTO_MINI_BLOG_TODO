@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"
+    href="https://cdn.icon-icons.com/icons2/2415/PNG/512/html_original_wordmark_logo_icon_146478.png"
+    type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Ejemplo para Proyecto Web Basico con HTML5, CSS de IHC">
+  <meta name="keywords" content="HTML, Bootstrap, CSS, JavaScript">
+  <meta name="author" content="ING. JUANCITO PEÑA">
+  <meta name="copyright" content="https://advisertecnology.com/" />
+  <title>Mini Blog con HTML5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="style.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+  <div class="container">
+
+   <!-- Carrusel de imágenes -->
+   <div class="w3-container">
+    <h2>La programación es como un lienzo en blanco donde la creatividad cobra vida a través del código.</h2>
+    <p>Transforma tu curiosidad en código, y tus sueños en tecnología: ¡Bienvenido al viaje de la programación, donde cada línea es un paso hacia la innovación.</p>
+  </div>
+
+  <div class="w3-content" style="max-width:1200px">
+    <img class="mySlides" src="imagenes/img1.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img2.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img3.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img4.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img5.png" style="width:100%">
+    <img class="mySlides" src="imagenes/img6.png" style="width:100%">
+  </div>
+
+  <div class="w3-center">
+    <div class="w3-section">
+      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+    <!-- <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+    <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    <button class="w3-button demo" onclick="currentDiv(3)">3</button>  -->
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
+    }
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+  </script>
+
+    <br>
+        <!-- Encabezado de la página -->
+
+<br>
+
+    <header class="header">
+      <div class="header-content">
+        <a class="navbar-brand" href="#">BIENVENIDOS A MI MINI-BLOG</a>
+        <nav class="nav-menu">
+          <a href="index.html">Inicio</a>
+          <a href="acerca.html">Acerca de</a>
+          <a href="cursos.html">Cursos</a>
+          <a href="contactos.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+
+    <main>
+      <div class="row">
+        <section class="col-68">
+                    <hr>
+            <!--ARTICULOS-->
+     
+        <h2>Contacto</h2>
+<!-- Un artículo que contiene el formulario -->
+<article>
+  <div class="formulario">
+    <!-- El formulario con la acción "#" que no realiza ninguna acción de envío real -->
+    <form action="#" onsubmit="return validarFormulario()">
+      <!-- Campo para el primer nombre -->
+      <label for="fname">Primer Nombre</label>
+      <input type="text" id="fname" name="firstname" placeholder="Escriba su Nombre.." required>
+  
+      <!-- Campo para los apellidos -->
+      <label for="lname">Sus Apellidos</label>
+      <input type="text" id="lname" name="lastname" placeholder="Escriba su Apellido.." required>
+  
+      <!-- Menú desplegable para seleccionar un país o ciudad -->
+      <label for="country">Pais o Ciudad</label>
+      <select id="country" name="country" required>
+        <option value="">Seleccione un país o ciudad</option>
+        <!-- Opciones para elegir el país o ciudad -->
+        <option value="australia">Rep. Dominicana</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <!-- Otras opciones -->
+      </select>
+  
+      <!-- Campo de texto largo para el mensaje -->
+      <label for="subject">Mensaje</label>
+      <textarea id="subject" name="subject" placeholder="Dejame tu Mensaje" style="height:200px" required></textarea>
+  
+      <!-- Botón para enviar el formulario -->
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+</article>
+
+<!-- Script de JavaScript para realizar la validación -->
+<script>
+  // Función que se ejecuta al enviar el formulario
+  function validarFormulario() {
+    // Obtener los valores ingresados por el usuario
+    var firstName = document.getElementById("fname").value;
+    var lastName = document.getElementById("lname").value;
+    var country = document.getElementById("country").value;
+    var subject = document.getElementById("subject").value;
+
+    // Validar que los campos no estén vacíos
+    if (firstName.trim() === "") {
+      alert("Por favor, ingrese su primer nombre.");
+      return false; // Evita que el formulario se envíe
+    }
+
+    if (lastName.trim() === "") {
+      alert("Por favor, ingrese sus apellidos.");
+      return false; // Evita que el formulario se envíe
+    }
+
+    if (country === "") {
+      alert("Por favor, seleccione un país o ciudad.");
+      return false; // Evita que el formulario se envíe
+    }
+
+    if (subject.trim() === "") {
+      alert("Por favor, ingrese un mensaje.");
+      return false; // Evita que el formulario se envíe
+    }
+
+    // Si todos los campos están completos, el formulario se enviará
+    return true;
+  }
+</script>
+
+          
+          <hr>
+          <div class="centrar-contenido">
+          <div class="redes">
+            <h2>Sigueme en mi Redes Sociales</h2>
+
+            <!-- Agregamos font awesome icons -->
+            <a href="#" class="fa fa-linkedin-square" style="font-size:48px"></a>
+            <a href="#" class="fa fa-youtube-square" style="font-size:48px"></a>
+            <a href="#" class="fa fa-facebook-square" style="font-size:48px"></a>
+            <a href="#" class="fa fa-twitter-square" style="font-size:48px"></a>
+            <a href="#" class="fa fa-github-square" style="font-size:48px"></a>
+
+          </div>
+        </div>
+
+
+
+        </section>
+
+               <!-- Barra lateral -->
+               <aside class="col-28">
+                <h2 class="h4">💚Tus Anuncios con Nostros lo ven todos</h2>
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <img src="https://www.psd-dude.com/tutorials/matrix-effect-animation-gif-photoshop-tutorial/matrix-effect-with-code-rain-animation-photoshop-tutorial.gif"
+                    alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+                  <p>El código que estás escribiendo hoy es el software que dará forma al mañana</p>
+                  <a href="#" class="btn btn-success">Ver Publicidad</a>
+                </div>
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <img class="web"
+                    src="https://balcru.com/cdn/shop/products/colecciones-RogelioILuis-gamer-Frase-Programador-vertical-acrilico.jpg?v=1614809444&width=1024"
+                    alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+                  <p>El código que estás escribiendo hoy es el software que dará forma al mañana
+                  </p>
+                  <a href="#" class="btn btn-success">Ver Publicidad</a>
+                </div>
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <img src="https://pbs.twimg.com/media/BnnQsSdIMAAigA0.jpg" alt="Anuncio publicitario"
+                    class="img-fluid rounded mb-2">
+                  <p>Cada error en el código es una oportunidad de aprendizaje hacia la excelencia en el desarrollo.
+                  </p>
+                  <a href="#" class="btn btn-success">Ver Publicidad</a>
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <img src="https://media.tenor.com/Z_Ah8rkdZ4YAAAAM/walking-code.gif" alt="Anuncio publicitario"
+                    class="img-fluid rounded mb-2">
+                  <p class="text-center">Cada error en el código es una oportunidad de aprendizaje hacia la excelencia en el desarrollo.</p>
+                  <a href="#" class="btn btn-success">Ver Publicidad</a>
+                </div>
+                
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Lt2P88q0Y68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>El desarrollo web es como un viaje interminable de resolución de acertijos, y cada logro es un paso hacia la siguiente maravilla digital..
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFPqYyd0Hh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>Escribe código como si la persona que lo mantendrá en el futuro fuera un psicópata violento que sabe dónde vives." - Martin Golding
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dd-g0g2tfxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>La programación no se trata de lo que haces con el código, sino de lo que puedes hacer con tu mente." - Evelyn H. Lauder
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mNbnV3aN3KA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>Un programador de verdad es aquel que sabe resolver problemas." - Edsger W. Dijkstra
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3yM5uXp-T_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>En la programación, como en la vida, la perseverancia y la paciencia son claves para el éxito." - Felicia Day
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9fwkpxr3Dw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>El software es como el sexo: mejor cuando es gratis." - Linus Torvalds
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+      
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9fwkpxr3Dw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>El software es como el sexo: mejor cuando es gratis." - Linus Torvalds
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+                
+                <div class="d-flex flex-column align-items-center mb-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XXllX0A_9KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <p>La mejor forma de predecir el futuro es implementarlo." - David Heinemeier Hansson
+                  </p>
+                  <a href="#" class="btn btn-success">Ver más Videos</a>
+      
+                </div>
+      
+              </aside>
+
+
+      </div>
+
+    </main>
+  
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white mt-4">
+      <h2>&copy; 2023 Juancito Peña V.</h2>
+      <h2><a href="https://advisertecnology.com/" target="_blank"
+          style="color: rgb(225, 207, 9);">https://advisertecnology.com/</a></h2>
+
+      <hr>
+      <div class="centrar-contenido">
+        <div class="redes">
+          <h2>Sigueme en mi Redes Sociales</h2>
+
+          <!-- Agregamos font awesome icons -->
+          <a href="https://www.linkedin.com/in/juancitope%C3%B1a/" class="fa fa-linkedin-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.youtube.com/channel/UCSob-3E5z4IHtMF5B4bN-FA" class="fa fa-youtube-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.facebook.com/juancito.p.v" class="fa fa-facebook-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://twitter.com/JuancitoPenaV" class="fa fa-twitter-square"
+            style="font-size:48px;  color: rgb(214, 208, 10);"></a>
+          <a href="https://github.com/JUANCITOPENA" class="fa fa-github-square"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+          <a href="https://www.instagram.com/juancito.pena.v/?hl=es" class="fa fa-instagram"
+            style="font-size:48px; color: rgb(214, 208, 10);"></a>
+
+
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>
