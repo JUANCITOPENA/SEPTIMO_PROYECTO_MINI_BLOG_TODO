@@ -19,7 +19,7 @@ Este Mini Blog está diseñado como un sitio web simple con varias páginas. Cad
 
 ![image](mini_blog.jpg)
 
-### Link pagina Web:
+### Link pagina Web: https://juancitopena.github.io/SEPTIMO_PROYECTO_MINI_BLOG_TODO/contactos.html
 
 ## Uso
 
